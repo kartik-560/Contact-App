@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "build": "react-scripts build",
+  "scripts": {
+    "start:frontend": "concurrently \"npm start --prefix ./reactnew/contact-app\"",
+    "start:backend": "concurrently \"npm start --prefix ./reactnew/server-api\"",
+    "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\""
+    
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
