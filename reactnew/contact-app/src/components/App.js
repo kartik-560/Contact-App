@@ -21,8 +21,9 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const retrieveContacts = async () => {
-     console.log("ENV BASE URL:", process.env.REACT_APP_API_BASE_URL);
+    
     try {
+       console.log("Fetching from:", `${process.env.REACT_APP_API_BASE_URL}/contacts`);
       const response = await api.get("/contacts");
       setContacts(response.data);
     } catch (error) {
